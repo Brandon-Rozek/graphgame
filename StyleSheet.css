@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Ubuntu;
+    font-style: normal;
+    src: url(UbuntuMono-R.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-weight: bold;
+    src: url(Ubuntu-M.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-style: thin;
+    src: url(Ubuntu-L.ttf);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+canvas {
+    display: block;
+}
+div.input {
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    left: 6%;
+    right: 0%;
+    text-align:center;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-style: normal;
+    font-size: 1.5em;
+    background-color:rgba(134, 238, 238, 0.6);
+    border-color:#BFBFBF;
+    border-radius: 15px;
+    border-width:medium;
+    padding: 5px;
+}
+input[type=text] {
+    font-family: Ubuntu;
+    padding: 3px;
+    font-size: 0.8em;
+    margin: 10px;
+    width: 10%;
+}
+/********Changed********/
+ input[type=submit] {
+    font-family: Ubuntu;
+    border-radius: 20px;
+    padding: 10px;
+    background: #73B9FF;
+    border: none;
+}
+
+div.msg {
+    z-index: 2;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50%;
+    top: 50%;
+    left: 0%;
+    right: 0%;
+    text-align:center;
+    width: 300px;
+    height: 150px;
+    background-color:rgba(134, 238, 238, 0.6);
+    border-color:#BFBFBF;
+    border-width:medium;
+    box-shadow:0px 0px 10px rgba(78, 78, 78, 0.89);
+    border-radius: 15px;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-style: bold;
+}
+
+#Menu {
+    font-family: Ubuntu;
+    font-size: 30px;
+    text-align: center;
+}
+
+.notice{
+    font-size: 15px;
+}
+li:hover:not(.clicked){
+    font-weight: bold;
+    text-shadow: 0px 0px 3px rgba(26, 10, 255, 1);
+}
+
+#topics{
+    list-style-type: none;
+}
+html{
+    height:100%;
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.1, #FFFFFF),
+    color-stop(0.71, #C0B8FF),
+    color-stop(0.86, #31A338)
+);
+background-image: -o-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+background-image: -moz-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+background-image: -ms-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+background-image: linear-gradient(to bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+}
+#Play{
+    font-size: 25px;
+    margin-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+input[type=submit]:hover{
+    background-color: #D6EBFF;
+    font-weight: bold;
+}
+.clicked {
+    font-weight: bold;
+    text-shadow: 0px 0px 3px rgba(26, 10, 255, 1);
+
+}
+label{
+    position: relative;
+}
+select{
+    background: none;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 20px;
+    width: 140px;
+    padding:12px;
+    text-align: center;
+    border: 3px solid #86eeee;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+label:after{
+    content: "\25bc";
+    font-size: 13px;
+    position: absolute;
+    right: 11px;
+    top: 13px;
+    pointer-events:none;
+}
+#timer{
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    right: 6%;
+    text-align:center;
+    color: red;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    background-color:rgba(134, 238, 238, 0.6);
+    border-color:#000000;
+    border-radius: 15px;
+    border-width:2px;
+    padding: 10px;
+    width: 150px;
+}
+.time {
+    display: inline;
+}
+#exit {
+    z-index: 2;
+    position: absolute;
+    top: 6%;
+    left: 1%;
+    margin-top:-30px;
+    margin-right:-30px;
+    cursor:pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background-color: #be5056;
+    font-family: Ubuntu;
+    font-size: 25px;
+    display: inline-block;
+    line-height: 0px;
+    padding: 14px 6px;      
+}
+#exit:hover {
+    font-weight: bold;
+    background-color: #cc8589;
+}

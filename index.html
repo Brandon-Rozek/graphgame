@@ -1,0 +1,99 @@
+<!-- index.html- creates visual framework. Calls upon necessary tags and files needed for this to work. Creates canvas. Up until #End it creates containers for each type of input. After #End is where the win/lose text goes. -->
+<!DOCTYPE html>
+<html lang="en">
+    <img id="balloon" src="balloon.png" hidden="true"/>
+    <head>
+        <meta charset="utf-8" />
+        <title>Graph Game</title>
+        <link href="StyleSheet.css" rel="stylesheet" />
+        <script src="jquery.js"></script>
+    </head>
+    
+    <body>
+
+       <div id="Menu">
+            <h1>Graph Game</h1>
+                <ul id="topics">
+                    <!--These items CANNOT have the same id as the divs below, which contain the input box and everything important!!!!!!-->
+                    <li id="TutorialTopic" class="topic">Tutorial</li>
+                    <li id="CoordinateTopic" class="topic">Coordinate</li>
+                    <li id="LinearTopic" class="topic">Linear Equations</li>
+					<li id="StandLinearTopic" class="topic">Linear Standard Form</li> 
+                    <li id="LinearTransformationsTopic" class="topic">Linear Transformations</li>
+                    <li id="SimpleQuadTopic" class="topic">Introduction to Quadratics</li>
+                    <li id="StandardQuadTopic" class="topic">Standard Quadratics Form</li>
+                    <li id = "GeneralQuadTopic" class="topic">General Quadratic Form</li>
+                    <li id="ZeroQuadTopic" class="topic">Zeros (Quadratics)</li>
+                    <li id="QuadTransformationsTopic" class= "topic"> Quadratic Transformations</li>
+                </ul>
+                <label>
+                    <select id="nchoice">
+                        <option value = "3">3 times</option>
+                        <option value = "5">5 times</option>
+                        <option value = "10">10 times</option>
+                        <option value = "time">Timed</option>
+                    </select>
+                </label>
+            <input type="submit" value="Play!" id="Play"/>
+            <p class = "notice">If you choose transformation levels it will be automatically set to 4 times.</p>
+        </div>
+        <canvas id="myCanvas" width="578" height="300"></canvas>
+        <p id="NotSuported">Your Browser is not compatible with the Canvas tag. Please use Chrome, Firefox, or IE 9 or above.</p>
+        <div id="Coordinate" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">(
+            <input type="text" id="X0" />,
+            <input type="text" id="Y0" />)
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="Tutorial" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y =
+            <input type="text" id="m1" class="text" />X +
+            <input type="text" id="b1" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="Linear" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y =
+            <input type="text" id="rise" value="rise" class="text" />/
+            <input type="text" id="run" value="run" class="text" />X<span id="Horizontal"></span> +
+            <input type="text" id="b2" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+		<div id="StandLinear" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">
+            <input type="text" id="a0" value="a" class="text" /> X + 
+            <input type="text" id="b0" value="b" class="text" /> Y = 
+            <input type="text" id="c0" value="c" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+		</div>
+        <div id="SimpleQuad" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y = ( X -
+            <input type="text" id="h1" value="h" class="text" />)^2 +
+            <input type="text" id="k1" value="k" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="StandardQuad" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y =
+            <input type="text" id="a" value="a" class="text" />( X -
+            <input type="text" id="h2" value="h" class="text" />)^2 +
+            <input type="text" id="k2" value="k" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="GenaralQuad" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y =
+            <input type="text" id="a2" value="a" class="text" />X^2 +
+            <input type="text" id="b3" value="b" class="text" />X +
+            <input type="text" id="c" value="c" class="text" />
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="ZeroQuad" class="input" onMouseDown="Game.Responsive.mouseDown(event)" onMouseUp="Game.Responsive.mouseUp()">Y = (X -
+            <input type="text" id="X1" />) (X -
+            <input type="text" id="X2" />)
+            <input type="submit" value="Submit!" class="Submit" />
+        </div>
+        <div id="exit">Exit</div>
+        <div id = "timer" onMouseDown="mouseDown(event)" onMouseUp="mouseUp()">
+            <p id = "minOut" class = "time"></p>:<p id = "secOut" class = "time"></p>
+        </div>
+        <div id="End"></div>
+        <script src="GameData.js"></script>
+        <script src="Graph.js"></script>
+        <script src="Responsive.js"></script>
+        <script src="PlayLevel.js"></script>
+        <script src="Input.js"></script>
+        <script src="Test.js"></script>
+    </body>
+
+</html>
